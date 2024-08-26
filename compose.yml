@@ -14,9 +14,8 @@ services:
       - MYSQL_DATABASE=nsmbhd
       - MYSQL_ROOT_PASSWORD=root
       - ABXD_SALT=VMQeVLNlKXJPZxAf
-    # volumes:
-    #   - nsmbhd:/app
-    #   - nsmbhd:/data
+    volumes:
+      - ./webroot/plugins/webhook:/app/webroot/plugins/webhook
   db:
     image: mysql
     restart: always
